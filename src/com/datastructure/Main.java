@@ -17,7 +17,8 @@ public class Main {
 //		ll.addFirst(30);
 //		ll.addFirst(56);
 		ll.display();
-		ll.deleteFirst();
+//		ll.deleteFirst();
+		ll.deleteLast();
 		ll.display();
 	}
 

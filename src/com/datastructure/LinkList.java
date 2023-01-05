@@ -52,6 +52,9 @@ public class LinkList {
 
 	}
 	}
+	/*
+	 * Delete first element
+	 */
 	public void deleteFirst()
 	{
 		if(head==null)
@@ -59,6 +62,29 @@ public class LinkList {
 			return;
 		}
 		head=head.next;
+	}
+	/*
+	 * Delete last element
+	 */
+	public void deleteLast()
+	{
+		if(head==null)
+		{
+			return;
+		}
+		if(head.next==null)
+		{
+			head=null;
+			return;
+		}
+	Node secondLast=head;
+	Node lastNode=head.next;
+	 while(lastNode.next!=null)
+	 {
+		 lastNode=lastNode.next;
+		 secondLast=secondLast.next;
+	 }
+	 secondLast.next=null; 
 	}
 /*
  * Print data
