@@ -52,6 +52,14 @@ public class LinkList {
 
 	}
 	}
+	public void deleteFirst()
+	{
+		if(head==null)
+		{
+			return;
+		}
+		head=head.next;
+	}
 /*
  * Print data
  */
