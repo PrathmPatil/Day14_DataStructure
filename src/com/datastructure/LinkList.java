@@ -29,6 +29,29 @@ public class LinkList {
 	node.next = head;
 	head = node;
 	}
+	/*
+	to add data to given position
+	*/
+	public void addAtPosition(int index , int data){
+	Node node = new Node();
+	node.data = data;
+	node.next = null;
+
+	if (index == 0){
+	addFirst(data);
+	}
+	else
+	{
+	Node currPosition = head;
+	for (int i = 0; i < index-1; i++)
+	{
+	currPosition = currPosition.next;
+	}
+	node.next = currPosition.next;
+	currPosition.next = node;
+
+	}
+	}
 /*
  * Print data
  */
