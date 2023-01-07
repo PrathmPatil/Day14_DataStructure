@@ -2,18 +2,27 @@ package com.datastructure;
 
 public class LinkList {
 	Node head;
-
+  private int size;
+    
+	public LinkList() {
+	
+	this.size = 0;
+}
 	// Creating linkedList and adding data
 	public void add(int data){
 	Node node = new Node();
 	node.data = data;
 	node.next = null;
-
-	if (head == null){
+     size++;
+	if (head == null)
+	{
 	head = node;
-	}else {
+	}
+	else 
+	{
 	Node currNode = head;
-	while (currNode.next != null){
+	while (currNode.next != null)
+	{
 	currNode = currNode.next;
 	}
 	currNode.next = node;
@@ -27,6 +36,7 @@ public class LinkList {
 	node.data = data;
 	node.next = null;
 	node.next = head;
+	size++;
 	head = node;
 	}
 	/*
@@ -36,7 +46,7 @@ public class LinkList {
 	Node node = new Node();
 	node.data = data;
 	node.next = null;
-
+     size++;
 	if (index == 0){
 	addFirst(data);
 	}
@@ -62,6 +72,7 @@ public class LinkList {
 			return;
 		}
 		head=head.next;
+		size--;
 	}
 	/*
 	 * Delete last element
@@ -79,12 +90,17 @@ public class LinkList {
 		}
 	Node secondLast=head;
 	Node lastNode=head.next;
+	size--;
 	 while(lastNode.next!=null)
 	 {
 		 lastNode=lastNode.next;
 		 secondLast=secondLast.next;
 	 }
 	 secondLast.next=null; 
+	}
+	public  int getsize()
+	{
+		return size;
 	}
 /*
  * Print data
@@ -96,6 +112,7 @@ public class LinkList {
 	node = node.next;
 	}
 	System.out.println(node.data);
+	
 	}
 	}
 
