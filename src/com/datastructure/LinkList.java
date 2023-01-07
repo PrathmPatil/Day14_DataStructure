@@ -102,6 +102,29 @@ public class LinkList {
 	{
 		return size;
 	}
+	/*
+	 * search linkedlist
+	 */
+	public void searchDelete(int data)
+	{
+		Node current=head, previous=null;
+		
+		if(current!=null&& current.data==data) {
+			head=current.next;
+			return;
+		}
+		
+			while(current!=null && current.data!=data)
+			{
+				previous=current;
+				current=current.next;
+			}
+			if(current==null)
+			{
+				return;
+			}
+		previous.next=current.next;
+	}
 /*
  * Print data
  */

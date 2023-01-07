@@ -17,16 +17,21 @@ public class Main {
 		System.out.println("Add at Position: ? "+"Value: ? ");
 		Scanner sc= new Scanner(System.in);
 		System.out.printf("Add at positon: %d "+"Value: %d",position=sc.nextInt(),value=sc.nextInt());
-		System.out.println();;
+		System.out.println();
 		ll.addAtPosition(position, value);
+		
+		int delete;
+		System.out.printf("Enter Delete Value: ");
+		delete=sc.nextInt();
+		ll.searchDelete(delete);
 //		ll.addFirst(70);
 //		ll.addFirst(30);
 //		ll.addFirst(56);
-		ll.display();
 //		ll.deleteFirst();
 //		ll.deleteLast();
 		ll.display();
-		System.out.println(ll.getsize());
+		System.out.println("size of list is "+ ll.getsize());
+		
 	}
 
 }
